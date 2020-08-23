@@ -22,13 +22,14 @@ const Wrapper = styled.div`
     
 `
 
-const IndexPage = ( {data} ) => {
-    return (
+
+const TreningiOnlinePage = ({data}) => {
+return (
     <>
     <Wrapper>
-    <h1 className={styles.Maintitle}>{data.datoCmsMain.title}</h1>
+    <h1 className={styles.Maintitle}>{data.datoCmsTreningionline.title}</h1>
         <div>
-        {data.datoCmsMain.content.map(item => {
+        {data.datoCmsTreningionline.content.map(item => {
             const itemKey = Object.keys(item)[1];
             switch(itemKey) {
                 case 'title':
@@ -48,12 +49,13 @@ const IndexPage = ( {data} ) => {
         </div>
     </Wrapper>
     </>
-    )
+
+)
 }
 
 export const query = graphql`
   query {
-    datoCmsMain {
+    datoCmsTreningionline {
         title
         content {
           ... on DatoCmsTitle {
@@ -78,5 +80,4 @@ export const query = graphql`
   }
 `
 
-
-export default IndexPage
+export default TreningiOnlinePage

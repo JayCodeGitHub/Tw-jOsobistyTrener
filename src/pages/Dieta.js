@@ -22,13 +22,13 @@ const Wrapper = styled.div`
     
 `
 
-const IndexPage = ( {data} ) => {
-    return (
+const DietaPage = ({data}) => {
+return (
     <>
     <Wrapper>
-    <h1 className={styles.Maintitle}>{data.datoCmsMain.title}</h1>
+    <h1 className={styles.Maintitle}>{data.datoCmsZywienie.title}</h1>
         <div>
-        {data.datoCmsMain.content.map(item => {
+        {data.datoCmsZywienie.content.map(item => {
             const itemKey = Object.keys(item)[1];
             switch(itemKey) {
                 case 'title':
@@ -48,12 +48,13 @@ const IndexPage = ( {data} ) => {
         </div>
     </Wrapper>
     </>
-    )
+
+)
 }
 
 export const query = graphql`
   query {
-    datoCmsMain {
+    datoCmsZywienie {
         title
         content {
           ... on DatoCmsTitle {
@@ -79,4 +80,4 @@ export const query = graphql`
 `
 
 
-export default IndexPage
+export default DietaPage

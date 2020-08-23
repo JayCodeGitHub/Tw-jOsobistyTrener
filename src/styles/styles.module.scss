@@ -1,0 +1,55 @@
+.Maintitle {
+    color: white;
+    text-align: center;
+}
+.title {
+    color: #ca3751;
+    text-align: center;
+}
+.tytuldwa {
+    color: white;
+    text-align: center;
+}
+.paragraph {
+    color: white;
+    text-align: center;
+}
+@media(max-width: 999px) {
+    .Maintitle {
+        font-size: 7vw;
+        padding-top: 6vw;
+    }
+    .title {
+        font-size: 7vw;
+    }
+    .tytuldwa {
+        font-size: 7vw;
+    }
+    .paragraph {
+        font-size: 5vw;
+    }
+    .img {
+        width: 90vw; 
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+    .film {
+        width: 90vw;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        height: 50vw;
+    }
+}
+@media(min-width: 1000px) {
+    .img {
+       width: 60vw; 
+       margin-left: 5vw;
+       margin-right: 5vw;
+    }
+    .film {
+        width: 60vw;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        height: 35vw;
+    }
+}

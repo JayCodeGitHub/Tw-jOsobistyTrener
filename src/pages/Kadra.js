@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { graphql } from 'gatsby'
 import styles from "../styles/styles.module.scss"
 
+
 const Wrapper = styled.div`
     @media(min-width: 1000px) {
         width: 70vw;
@@ -22,13 +23,13 @@ const Wrapper = styled.div`
     
 `
 
-const IndexPage = ( {data} ) => {
-    return (
+const KadraPage = ({data}) => {
+return (
     <>
     <Wrapper>
-    <h1 className={styles.Maintitle}>{data.datoCmsMain.title}</h1>
+    <h1 className={styles.Maintitle}>{data.datoCmsKadra.title}</h1>
         <div>
-        {data.datoCmsMain.content.map(item => {
+        {data.datoCmsKadra.content.map(item => {
             const itemKey = Object.keys(item)[1];
             switch(itemKey) {
                 case 'title':
@@ -48,12 +49,13 @@ const IndexPage = ( {data} ) => {
         </div>
     </Wrapper>
     </>
-    )
+
+)
 }
 
 export const query = graphql`
   query {
-    datoCmsMain {
+    datoCmsKadra {
         title
         content {
           ... on DatoCmsTitle {
@@ -78,5 +80,4 @@ export const query = graphql`
   }
 `
 
-
-export default IndexPage
+export default KadraPage
